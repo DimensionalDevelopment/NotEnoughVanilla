@@ -1,0 +1,11 @@
+{
+  "id": "notenoughvanilla",
+  "name": "NotEnoughVanilla",
+  "authors": [
+    "Runemoro",
+    "Waterpicker"
+  ],
+  "listeners": [
+    "org.dimdev.notenoughvanilla.NotEnoughVanilla"
+  ]
+}
