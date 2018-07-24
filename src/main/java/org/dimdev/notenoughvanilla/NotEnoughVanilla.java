@@ -19,13 +19,16 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.dimdev.notenoughvanilla.block.BlockCraftingChest;
+import org.dimdev.notenoughvanilla.block.BlockLantern;
+import org.dimdev.notenoughvanilla.block.LanternLight;
+import org.dimdev.notenoughvanilla.item.ItemLantern;
 import org.dimdev.rift.listener.BlockAdder;
 import org.dimdev.rift.listener.ItemAdder;
 
 public class NotEnoughVanilla implements BlockAdder, ItemAdder {
-    Block CRAFTING_CHEST = new BlockCraftingChest(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.5F, 2.5F).soundType(SoundType.WOOD));
+    public static Block CRAFTING_CHEST = new BlockCraftingChest(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.5F, 2.5F).soundType(SoundType.WOOD));
 
-    Item PORTABLE_CRAFTING_TABLE = new Item(new Item.Builder().maxStackSize(1).group(ItemGroup.HOTBAR)) {
+    public static Item PORTABLE_CRAFTING_TABLE = new Item(new Item.Builder().maxStackSize(1).group(ItemGroup.HOTBAR)) {
         @Override
         public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
             if (!world.isRemote && hand.equals(EnumHand.MAIN_HAND)) {
@@ -45,14 +48,22 @@ public class NotEnoughVanilla implements BlockAdder, ItemAdder {
         }
     };
 
+    public static LanternLight LANTERN_LIGHT = new LanternLight();
+    public static BlockLantern LANTERN_BLOCK = new BlockLantern();
+
+    public static ItemLantern LANTERN_ITEM = new ItemLantern();
+
     @Override
     public void registerBlocks() {
         Block.registerBlock(new ResourceLocation("notenoughvanilla:crafting_chest"), CRAFTING_CHEST);
+        Block.registerBlock("notenoughvanilla:lantern_light", LANTERN_LIGHT);
+        Block.registerBlock("notenoughvanilla:lantern_block", LANTERN_BLOCK);
     }
 
     @Override
     public void registerItems() {
         Item.registerItemBlock(CRAFTING_CHEST, ItemGroup.BUILDING_BLOCKS);
         Item.registerItem(new ResourceLocation("notenoughvanilla:portable_crafting_table"), PORTABLE_CRAFTING_TABLE);
+        Item.registerItemBlock(LANTERN_BLOCK, LANTERN_ITEM);
     }
 }
