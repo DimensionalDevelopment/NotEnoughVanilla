@@ -1,0 +1,36 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "notenoughvanilla:block/lantern"
+  },
+  "display": {
+    "firstperson_lefthand": {
+      "scale": [
+        0.50,
+        0.50,
+        0.50
+      ]
+    },
+    "firstperson_righthand": {
+      "scale": [
+        0.50,
+        0.50,
+        0.50
+      ]
+    },
+    "thirdperson_lefthand": {
+      "scale": [
+        0.50,
+        0.50,
+        0.50
+      ]
+    },
+    "thirdperson_righthand": {
+      "scale": [
+        0.50,
+        0.50,
+        0.50
+      ]
+    }
+  }
+}

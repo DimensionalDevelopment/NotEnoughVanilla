@@ -20,7 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.dimdev.notenoughvanilla.block.BlockCraftingChest;
 import org.dimdev.notenoughvanilla.block.BlockLantern;
-import org.dimdev.notenoughvanilla.block.LanternLight;
+import org.dimdev.notenoughvanilla.block.BlockLight;
 import org.dimdev.notenoughvanilla.item.ItemLantern;
 import org.dimdev.rift.listener.BlockAdder;
 import org.dimdev.rift.listener.ItemAdder;
@@ -48,16 +48,16 @@ public class NotEnoughVanilla implements BlockAdder, ItemAdder {
         }
     };
 
-    public static LanternLight LANTERN_LIGHT = new LanternLight();
+    public static BlockLight LANTERN_LIGHT = new BlockLight();
     public static BlockLantern LANTERN_BLOCK = new BlockLantern();
 
     public static ItemLantern LANTERN_ITEM = new ItemLantern();
 
     @Override
     public void registerBlocks() {
-        Block.registerBlock(new ResourceLocation("notenoughvanilla:crafting_chest"), CRAFTING_CHEST);
-        Block.registerBlock("notenoughvanilla:lantern_light", LANTERN_LIGHT);
-        Block.registerBlock("notenoughvanilla:lantern_block", LANTERN_BLOCK);
+        Block.registerBlock("notenoughvanilla:crafting_chest", CRAFTING_CHEST);
+        Block.registerBlock("notenoughvanilla:light", LANTERN_LIGHT);
+        Block.registerBlock("notenoughvanilla:lantern", LANTERN_BLOCK);
     }
 
     @Override

@@ -17,8 +17,8 @@ import org.dimdev.notenoughvanilla.NotEnoughVanilla;
 import java.util.List;
 import java.util.Random;
 
-public class LanternLight extends BlockAir {
-    public LanternLight() {
+public class BlockLight extends BlockAir {
+    public BlockLight() {
         super(Builder.create(Material.AIR));
     }
 
@@ -41,8 +41,7 @@ public class LanternLight extends BlockAir {
 
     @Override
     public int getLightValue(IBlockState p_getLightValue_1_) {
-        return 12
-                ;
+        return 12;
     }
 
     @Override
