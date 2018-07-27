@@ -2,7 +2,6 @@ package org.dimdev.notenoughvanilla.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumHand;
@@ -18,8 +17,8 @@ import java.util.List;
 import java.util.Random;
 
 public class BlockLight extends BlockAir {
-    public BlockLight() {
-        super(Builder.create(Material.AIR));
+    public BlockLight(Builder builder) {
+        super(builder);
     }
 
     @Override
