@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "notenoughvanilla:block/torch_off" }
+    }
+}

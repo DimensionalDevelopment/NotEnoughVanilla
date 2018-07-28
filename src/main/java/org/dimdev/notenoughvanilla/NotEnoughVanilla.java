@@ -11,9 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.world.IInteractionObject;
-import org.dimdev.notenoughvanilla.block.BlockCraftingChest;
-import org.dimdev.notenoughvanilla.block.BlockLantern;
-import org.dimdev.notenoughvanilla.block.BlockLight;
+import org.dimdev.notenoughvanilla.block.*;
 import org.dimdev.notenoughvanilla.gui.GuiCraftingChest;
 import org.dimdev.notenoughvanilla.item.ItemLantern;
 import org.dimdev.notenoughvanilla.item.ItemPortableCraftingTable;
@@ -27,6 +25,8 @@ public class NotEnoughVanilla implements BlockAdder, ItemAdder, GameGuiAdder, Ti
     public static Block CRAFTING_CHEST_BLOCK = new BlockCraftingChest(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.5F, 2.5F).soundType(SoundType.WOOD));
     public static BlockLight LIGHT_BLOCK = new BlockLight(Block.Builder.create(Material.AIR));
     public static BlockLantern LANTERN_BLOCK = new BlockLantern(Block.Builder.create(Material.GLASS).doesNotBlockMovement().lightValue(15));
+    public static Block BURNT_OUT_TORCH = new BlockBurntOutTorch(Block.Builder.create(Material.CIRCUITS).doesNotBlockMovement().zeroHardnessAndResistance().soundType(SoundType.WOOD));
+    public static Block BURNT_OUT_WALL_TORCH = new BlockBurntOutTorchWall(Block.Builder.create(Material.CIRCUITS).doesNotBlockMovement().zeroHardnessAndResistance().soundType(SoundType.WOOD));
 
     public static Item PORTABLE_CRAFTING_TABLE_ITEM = new ItemPortableCraftingTable(new Item.Builder().maxStackSize(1).group(ItemGroup.TOOLS));
     public static ItemLantern LANTERN_ITEM = new ItemLantern(new Item.Builder().maxStackSize(1).maxDamage(32).group(ItemGroup.TOOLS));
@@ -38,6 +38,8 @@ public class NotEnoughVanilla implements BlockAdder, ItemAdder, GameGuiAdder, Ti
         Block.registerBlock("notenoughvanilla:crafting_chest", CRAFTING_CHEST_BLOCK);
         Block.registerBlock("notenoughvanilla:light", LIGHT_BLOCK);
         Block.registerBlock("notenoughvanilla:lantern", LANTERN_BLOCK);
+        Block.registerBlock("notenoughvanilla:burnt_out_torch", BURNT_OUT_TORCH);
+        Block.registerBlock("notenoughvanilla:burnt_out_wall_torch", BURNT_OUT_WALL_TORCH);
     }
 
     @Override
