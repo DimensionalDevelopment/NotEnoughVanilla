@@ -6,6 +6,7 @@
     "Waterpicker"
   ],
   "listeners": [
+    "org.dimdev.notenoughvanilla.NotEnoughVanillaCore",
     "org.dimdev.notenoughvanilla.NotEnoughVanilla"
   ]
 }
